@@ -72,6 +72,8 @@ export default class Users extends React.Component {
         User List
     {this.getUserData().map( (user,i) =>
     <Content key = {i} componentData = {user}/>
+      {//<h1> {user.name} </h1>}}
+
     )}
       </div>
     )

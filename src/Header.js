@@ -10,13 +10,13 @@ export default class Header extends React.Component {
       isUserLoggedIn: !true
     }
   }
-  headContent() { return this.state.isUserLoggedIn ? (<button>Login</button>) : (<span>Hello</span>);}
+  headContent() { return this.state.isUserLoggedIn ? (<button>Login</button>) : (<span>Hello...vishal</span>);}
 
   render() {
     return (
       <div>
         Header Content.....
-    {this.headContent()}
+    { this.state.isUserLoggedIn ? (<button>Login</button>) : (<span>Hello</span>)}
       </div>
     )
   }
