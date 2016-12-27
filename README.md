@@ -3,9 +3,9 @@ Repository for react exercises
 
 # Day 1
 
-* Create a class Student having two fields name and roll number and a method to print the student detail. Create two objects of the class and use display method to print the user detail. perform the above tast using **ES6**
+1. Create a class Student having two fields name and roll number and a method to print the student detail. Create two objects of the class and use display method to print the user detail. perform the above tast using **ES6**
 
-* Create a simple component called HelloWorld. This component only renders "Hello World" on the screen
+2. Create a simple component called HelloWorld. This component only renders "Hello World" on the screen
 
 * Create a component called "Header" which either displays the current logged in username (if a user is logged in) or a "Login" button (if no user is logged in) in the navbar.
 Use a hardcoded global variable "isUserLoggedIn" to check if user is logged in or not. 
