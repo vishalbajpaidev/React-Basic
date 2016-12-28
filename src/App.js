@@ -3,6 +3,7 @@
  */
 import React from 'react'
 import Water from './Water'
+import RandomTempWater from './RandomTempWater'
 export default class App extends React.Component {
   constructor() {
     super();
@@ -12,7 +13,7 @@ export default class App extends React.Component {
     return (
       <div>
        <h2> Day 2</h2>
-        <Water/>
+        <RandomTempWater/>
       </div>
     )
   }
