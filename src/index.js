@@ -4,8 +4,9 @@ import {render} from 'react-dom';
 // import App from './App'
 import UserDetailApp from './UserDetailApp'
 import UserDetailValidationApp from './UserDetailValidationApp'
+import StopWatch from './StopWatch'
 
 let app = document.getElementById('main')
 
 
-render(<UserDetailValidationApp />, app)
+render(<StopWatch />, app)
