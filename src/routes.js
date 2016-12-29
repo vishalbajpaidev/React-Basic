@@ -22,6 +22,7 @@ export const route_exe2 = (
     <Route path="/" component={LoginApp}>
       <IndexRoute  component={LoginPage} />
       <Route path="home" component={Home} />
+      <Route path="login-failed" component={LoginFailed} />
     </Route>
   </Router>
 );
