@@ -11,6 +11,7 @@ export default class Cart extends React.Component{
     this.addItem = this.addItem.bind(this);
     this.incQty = this.incQty.bind(this);
     this.decQty = this.decQty.bind(this);
+    this.deleteFun = this.deleteFun.bind(this);
 
   }
 
@@ -44,13 +45,20 @@ export default class Cart extends React.Component{
     this.setState({Items:newState});
   }
 
+  deleteFun(item,index){
+    // console.log(item,index,this.state.Items);
+    let newState = this.state.Items;
+    delete newState[index];
+    this.setState({Items:newState});
+  }
+
   render(){
     return(
       <div>
         <span>Item and price sperated by a -(hyphen)</span>
         <input type="text" ref="itemInfo"/> <button onClick={this.addItem}>Add</button>
         <h2>My Cart</h2>
-        <Item items = {this.state.Items} incQtyFun={this.incQty} decQtyFun={this.decQty}></Item>
+        <Item items = {this.state.Items} incQtyFun={this.incQty} decQtyFun={this.decQty} deleteFun={this.deleteFun}></Item>
         <CartTotal items = {this.state.Items} ></CartTotal>
       </div>
     )
@@ -73,6 +81,7 @@ class Item extends React.Component{
         <td>{itemDetail.price}</td>
         <td><button onClick={()=>this.props.incQtyFun(itemDetail,i)}>Increse Qty</button></td>
         <td><button onClick={()=>this.props.decQtyFun(itemDetail,i)}>Decrese Qty</button></td>
+        <td><button onClick={()=>this.props.deleteFun(itemDetail,i)}>delete</button></td>
       </tr> );
     return(
       <table>
