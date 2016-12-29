@@ -4,12 +4,28 @@ import  App from './App'
 import  Home from './Home'
 import  About from './About'
 import  ContactUs from './ContactUs'
-import  route from './routes'
+import  LoginApp from './LoginApp'
+import  LoginPage from './LoginPage'
+import  LoginFailed from './LoginFailed'
 import { Router, Route, Link , browserHistory, IndexRoute} from 'react-router'
-export default route = (
+export const route_exe1 = (
 <Route path="/" component={App}>
   <IndexRoute  component={Home} />
   <Route path="about" component={About} />
   <Route path="contact-us" component={ContactUs} />
 </Route>
 );
+
+export const route_exe2 = (
+  <Router history = {browserHistory} >
+    <Route path="/" component={LoginApp}>
+      <IndexRoute  component={LoginPage} />
+      <Route path="home" component={Home} />
+    </Route>
+  </Router>
+);
+
+
+/*render((
+
+ ), document.getElementById('main'))*/
