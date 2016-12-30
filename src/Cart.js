@@ -2,8 +2,8 @@ import React from 'react'
 
 export default class Cart extends React.Component{
 
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
 
     this.state = {
       Items  : [ {name: 'item1', qty:2, price: 30}, {name: 'item2', qty:5, price: 10}, {name: 'item3', qty:7, price: 120} ],
@@ -31,10 +31,10 @@ export default class Cart extends React.Component{
     let name = itemInfoSplit[0];
     let price = itemInfoSplit[1];
     let qty = itemInfoSplit[2] || 1;
-    let newState = this.state.Items;
-    newState.push({name,price,qty})
+    // let newState = this.state.Items;
+    // newState.push({name,price,qty})
     this.setState({
-      Items : newState
+      Items : [...this.state.Items,{name,price,qty}]
     });
     console.log(this.state.Items,"<<<<<>>> ");
   }
@@ -118,4 +118,8 @@ class CartTotal extends React.Component{
       </div>
     )
   }
+}
+
+CartTotal.propTypes = {
+  items: React.PropTypes.array.isRequired,
 }
