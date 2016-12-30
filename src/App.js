@@ -3,13 +3,14 @@
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
+import CustomInput from './CustomInput'
+
 var FontAwesome = require('react-fontawesome');
 // require('./demo.scss')
 
 export default class App extends React.Component {
   constructor() {
     super()
-
     this.changeColor = this.changeColor.bind(this)
   }
   changeColor(e){
@@ -19,7 +20,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <FontAwesome name='angle-double-up' size='5x' onClick={this.changeColor} ></FontAwesome>
+        <CustomInput/>
       </div>
     )
   }
