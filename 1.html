@@ -1,0 +1,16 @@
+<script>
+    // 1 Create a class Student having two fields name and roll number and a method to print the student detail. Create two objects of the class and use display method to print the user detail. perform the above tast using **ES6**
+    class Student{
+        constructor(name, rollNumber) {
+            this.name = name;
+            this.rollNumber = rollNumber;
+        }
+        setStudentInfo(){
+            return `Student name is {$this.name} and rool number {$rollNumber}`;
+        }
+    }
+    let stu1 = new Student("Ashu","840")
+    let stu2 = new Student("Anil","420")
+    console.log(stu1,stu2)
+</script>
+
