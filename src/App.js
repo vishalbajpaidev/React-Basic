@@ -48,18 +48,18 @@ class Item extends React.Component {
             {
                 this.props.items.map((item, index) => {
                     return <tr key={index}>
-                        <td>{item.name}</td>
-                        <td>{item.qty}</td>
-                        <td>{item.price}</td>
-                        <td>
-                        <button onClick={() => this.props.addQty(index)}>Increase</button>
-                        </td>
-                        <td>
-                        <button onClick={() => this.props.decQty(index)}>Decrease</button>
-                        </td>
-                        <td>
-                        <button onClick={() => this.props.removeItem(index)}>Remove</button>
-                        </td>
+                              <td>{item.name}</td>
+                              <td>{item.qty}</td>
+                              <td>{item.price}</td>
+                              <td>
+                                  <button onClick={() => this.props.addQty(index)}>Increase</button>
+                              </td>
+                              <td>
+                                  <button onClick={() => this.props.decQty(index)}>Decrease</button>
+                              </td>
+                              <td>
+                                  <button onClick={() => this.props.removeItem(index)}>Remove</button>
+                              </td>
                         </tr>
                         })
                         }

@@ -28,9 +28,9 @@ const dateReducer = function (state = initialState, action) {
     		return { ...state, item_list };
       }
       case DELETE_ITEM:{
-          let item_list = state.items;
-    	item_list.splice(action.item,1);
-    	return { ...state, item_list };
+          // let item_list = state.items;
+    	// item_list.splice(action.item,1);
+    	return {...state};
       }
   }
   return state;
