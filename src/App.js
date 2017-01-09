@@ -82,18 +82,17 @@ class Item extends React.Component {
 				}
 
 
-var AppComponent = connect((state) => {
-    return state;
-}, (dispatch) => {
-    return {
-        addQuantity(add) {
-            dispatch(addQuantity(add));
-        },reduceQuantity (reduce) {
-            dispatch(reduceQuantity(reduce));
-        },delItem(del){
-            dispatch(delItem(del));
-        }
+function mapStateToProps = (dispatch) => {
+  return {
+    addQuantity(add) {
+      dispatch(addQuantity(add));
+    },reduceQuantity (reduce) {
+      dispatch(reduceQuantity(reduce));
+    },delItem(del){
+      dispatch(delItem(del));
     }
-})(App);
+  }
+}
+  var AppComponent = connect(mapStateToProps)(App);
 
 export default AppComponent;
