@@ -16,21 +16,17 @@ const initialState = {
 const dateReducer = function (state = initialState, action) {
   switch (action.type) {
     case ADD_QUANTITY:{
-    	let item_list = state.items;
-    	item_list[action.add].qty++;
-    	return { ...state, item_list };
+    	return { ...state, item:{..state.item,item_list[action.add].qty++} };
     }
       case REDUCE_QUANTITY:{
             let item_list = state.items;
 	    	if(item_list[action.reduce].qty > 1){
-		      item_list[action.reduce].qty--;
-		    }
-    		return { ...state, item_list };
+          return { ...state, item:{..state.item,item_list[action.add].qty++} };
+        }
+    		return state;
       }
       case DELETE_ITEM:{
-          // let item_list = state.items;
-    	// item_list.splice(action.item,1);
-    	return {...state};
+    	return { ...state, item:{..state.item,state.items.splice(action.item,1)} };
       }
   }
   return state;
